@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/DDB324/gulu/issues"
   },
-  "homepage": "https://github.com/DDB324/gulu#readme"
+  "homepage": "https://github.com/DDB324/gulu#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
