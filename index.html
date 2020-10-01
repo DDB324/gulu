@@ -35,17 +35,18 @@
 </head>
 <body>
 <div id="app">
-    <g-button icon="settings">
+    <g-button>
         我爱JS
     </g-button>
-    <g-button icon="settings" icon-position="right">
+    <g-button :loading="loading1" @click="loading1 = !loading1">
         我爱JS
     </g-button>
-    <g-button icon="settings" icon-position="left">
+    <g-button icon="settings" icon-position="left" :loading="loading2" @click="loading2 = !loading2">
         我爱JS
     </g-button>
-    <g-icon name="download"></g-icon>
-    <g-icon name="Loading"></g-icon>
+    <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+        我爱JS
+    </g-button>
 </div>
 <script src="./src/app.js"></script>
 <script src="//at.alicdn.com/t/font_2109690_qv4bq0sq3ad.js"></script>
