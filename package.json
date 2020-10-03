@@ -21,11 +21,13 @@
   },
   "homepage": "https://github.com/DDB324/gulu#readme",
   "dependencies": {
+    "char": "^1.0.2",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
+    "chai": "^4.2.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.11",
     "typescript": "^4.0.3",
