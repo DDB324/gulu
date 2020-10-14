@@ -1,5 +1,7 @@
 # gulu - 一个Vue UI组件
 
+[![Build Status](https://travis-ci.org/DDB324/gulu.svg?branch=master)](https://travis-ci.org/DDB324/gulu)
+
 作者：ddb
 
 ## 介绍
