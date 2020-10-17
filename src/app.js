@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Button from "./Button";
 import Icon from "./Icon";
 import ButtonGroup from './Button-group'
+import Input from "./Input";
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
 Vue.component('g-button-group', ButtonGroup)
+Vue.component('g-input', Input)
 
 new Vue({
     el: '#app',
@@ -47,7 +49,7 @@ const expect = chai.expect
     vm.$mount()
     let useElement = vm.$el.querySelector('use')
     expect(useElement.getAttribute('xlink:href')).to
-        .eq('#i-Loading')
+        .eq('#i-loading')
     vm.$el.remove()
     vm.$destroy()
 }
