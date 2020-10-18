@@ -43,7 +43,10 @@
     <div class="box">
         <g-input value="你好" disabled></g-input>
         <g-input value="张三" read-only></g-input>
-        <g-input value="李四" @input="inPut"></g-input>
+        <g-input  v-model="message"></g-input>
+<!--         :value='message' @input='message = $event.target.value'-->
+        <p>{{ message }}</p>
+        <button @click="message += 1">+1</button>
     </div>
     <div class="box">
         <g-input value="王五" error="姓名不能少于两个字"></g-input>
