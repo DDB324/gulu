@@ -15,6 +15,11 @@ new Vue({
         loading1: false,
         loading2: true,
         loading3: false
+    },
+    methods: {
+        inPut(e) {
+            console.log(e.target.value);
+        }
     }
 })
 
