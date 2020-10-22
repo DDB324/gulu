@@ -37,28 +37,75 @@
             margin: 20px;
         }
     </style>
+    <style>
+        .demoBox {
+            /*min-height: 50px;*/
+            background: #f5f5f5;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .logo-wrapper {
+            padding: 10px;
+        }
+
+        .demoBox1 {
+            background: #fff;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
     <div style="border:1px solid black;">
-        <g-row gutter="20">
-            <g-col>1</g-col>
-            <g-col>2</g-col>
+        <g-row class="topBar">
+            <g-col class="demoBox" span="9">
+                <g-row gutter="10">
+                    <g-col>中国大陆</g-col>
+                    <g-col>亲,请登录</g-col>
+                    <g-col>免费注册</g-col>
+                    <g-col>手机逛淘宝</g-col>
+                </g-row>
+            </g-col>
+            <g-col class="demoBox" span="15">
+                <g-row align="right" gutter="10">
+                    <g-col>我的淘宝</g-col>
+                    <g-col>购物车</g-col>
+                    <g-col>收藏夹</g-col>
+                    <g-col>商品分类</g-col>
+                    <g-col>免费开店</g-col>
+                    <g-col>千牛卖家中心</g-col>
+                    <g-col>联系客服</g-col>
+                    <g-col>网站导航</g-col>
+                </g-row>
+            </g-col>
         </g-row>
-        <g-row>
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-            <g-col>3</g-col>
-        </g-row>
-        <g-row>
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-            <g-col>3</g-col>
-            <g-col>4</g-col>
-        </g-row>
-        <g-row>
-            <g-col :span="2">1</g-col>
-            <g-col span="20" offset="2">2</g-col>
+        <g-row class="logo-and-search-and-qrcode">
+            <g-col class="demoBox1" span="10">
+                <g-row align="center">
+                    <g-col>
+                        <div class="logo-wrapper">
+                            <img class="logo" src="//img.alicdn.com/tfs/TB1P3dsZUY1gK0jSZFCXXcwqXXa-290-130.gif"
+                                 alt="2020双11"
+                                 style="width:290px;height:130px;left:-20px;top:0px;">
+                        </div>
+                    </g-col>
+                </g-row>
+            </g-col>
+            <g-col class="demoBox1" span="10">2</g-col>
+            <g-col class="demoBox1" span="4">
+                <g-row align="center" style="height: 100%">
+                    <g-col style="display: flex;flex-direction: column-reverse">
+                        <div class="logo-wrapper">
+                            <img style="width:62px;height:62px" class="qrcode"
+                                 src="//img.alicdn.com/tfs/TB18W1cQFXXXXaWXXXXXXXXXXXX-160-160.png"
+                                 data-src="//img.alicdn.com/tfs/TB18W1cQFXXXXaWXXXXXXXXXXXX-160-160.png"
+                                 aria-labelledby="mtb">
+                        </div>
+                    </g-col>
+                </g-row>
+            </g-col>
         </g-row>
     </div>
     <div class="box">
