@@ -41,7 +41,7 @@ export default {
         arr.push(`col-${str}${obj.span}`)
       }
       if (obj.offset) {
-        arr.push(`col-${str}${obj.offset}`)
+        arr.push(`offset-${str}${obj.offset}`)
       }
       return arr
     }

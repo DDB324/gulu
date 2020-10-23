@@ -48,26 +48,13 @@
 <body>
 <div id="app">
     <div style="border:1px solid black;">
-        <g-row>
-            <g-col span="24" :i-pad="{span:12}" :narrow-pc="{span:8}" :pc="{span:6}" :wide-pc="{span:4}">
-                <div class="demo" ></div>
-            </g-col>
-            <g-col span="24" :i-pad="{span:12}" :narrow-pc="{span:8}" :pc="{span:6}" :wide-pc="{span:4}">
-                <div class="demo" ></div>
-            </g-col>
-            <g-col span="24" :i-pad="{span:12}" :narrow-pc="{span:8}" :pc="{span:6}" :wide-pc="{span:4}">
-                <div class="demo" ></div>
-            </g-col>
-            <g-col span="24" :i-pad="{span:12}" :narrow-pc="{span:8}" :pc="{span:6}" :wide-pc="{span:4}">
-                <div class="demo" ></div>
-            </g-col>
-            <g-col span="24" :i-pad="{span:12}" :narrow-pc="{span:8}" :pc="{span:6}" :wide-pc="{span:4}">
-                <div class="demo" ></div>
-            </g-col>
-            <g-col span="24" :i-pad="{span:12}" :narrow-pc="{span:8}" :pc="{span:6}" :wide-pc="{span:4}">
-                <div class="demo" ></div>
-            </g-col>
+        <g-row gutter="20">
+            <g-col span="12">1</g-col>
+            <g-col span="12" >2</g-col>
         </g-row>
+    </div>
+    <div>
+        <g-col span="24" offset="1" :i-pad="{span:1,offset:1}">3</g-col>
     </div>
     <div class="box">
         <g-input value="你好" disabled></g-input>
