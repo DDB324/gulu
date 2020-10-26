@@ -25,7 +25,7 @@
         }
 
         #app {
-            margin: 20px;
+            /*margin: 20px;*/
         }
 
         body {
@@ -33,20 +33,30 @@
         }
     </style>
     <style>
-        .demo {
-            min-height: 100px;
-            border: 1px solid #666;
+        .sider {
+            background: #333333;
+            width: 200px;
+        }
+
+        .header {
+            background: #999999;
+            height: 100px;
+        }
+
+        .footer {
+            background: #cccccc;
+            height: 50px;
         }
     </style>
 </head>
 <body>
 <div id="app">
-    <g-layout style="height:100vh;border:1px solid red">
-        <g-sider class="demo">sider</g-sider>
+    <g-layout style="height: 100vh">
+        <g-sider>sider</g-sider>
         <g-layout>
-            <g-header class="demo">header</g-header>
-            <g-content class="demo">content</g-content>
-            <g-footer class="demo">footer</g-footer>
+            <g-header>header</g-header>
+            <g-content>content</g-content>
+            <g-footer>footer</g-footer>
         </g-layout>
     </g-layout>
 </div>
