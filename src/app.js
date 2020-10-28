@@ -40,12 +40,13 @@ new Vue({
             this.$toast('<p><strong>我是message</strong><a href="http://bilibili.com">bilibili</a> </p>', {
                 closeButton: {
                     text: '知道了',
-                    callback(toast) {
-                        toast.log()
+                    callback() {
                         console.log('用户说他知道了');
                     }
                 },
-                // enableHtml: true
+                enableHtml: true,
+                autoCloseDelay: 500,
+                position: 'bottom'
             })
         }
     }
