@@ -35,11 +35,18 @@ new Vue({
         loading3: false,
         message: '你好'
     },
-    created() {
-    },
     methods: {
         showToast() {
-            this.$toast('我是message')
+            this.$toast('<p><strong>我是message</strong><a href="http://bilibili.com">bilibili</a> </p>', {
+                closeButton: {
+                    text: '知道了',
+                    callback(toast) {
+                        toast.log()
+                        console.log('用户说他知道了');
+                    }
+                },
+                // enableHtml: true
+            })
         }
     }
 })
