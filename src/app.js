@@ -37,16 +37,16 @@ new Vue({
     },
     methods: {
         showToast() {
-            this.$toast('<p><strong>我是message</strong><a href="http://bilibili.com">bilibili</a> </p>', {
+            this.$toast(`今天花了${parseInt((Math.random() * 100).toString())}`, {
                 closeButton: {
                     text: '知道了',
                     callback() {
                         console.log('用户说他知道了');
                     }
                 },
-                enableHtml: true,
+                // enableHtml: true,
                 autoCloseDelay: 500,
-                position: 'bottom'
+                position: 'middle'
             })
         }
     }

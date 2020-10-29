@@ -48,7 +48,6 @@ export default {
   mounted() {
     this.updateStyle()
     this.execAutoClose()
-    console.log(this.position);
   },
   computed: {
     toastStyle() {
@@ -57,7 +56,6 @@ export default {
     }
   },
   methods: {
-
     execAutoClose() {
       if (this.autoClose) {
         setTimeout(() => {
@@ -98,21 +96,11 @@ $toast-color: white;
   padding: 0 16px;display: flex;align-items: center;background: $toast-bg;
   color: $toast-color;border-radius: 4px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 
-  &.position-top {
-    top: 0;
-    transform: translateX(-50%);
-  }
+  &.position-top {top: 0;transform: translateX(-50%);}
 
-  &.position-middle {
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+  &.position-middle {top: 50%;transform: translate(-50%, -50%);}
 
-  &.position-bottom {
-    bottom: 0;
-    transform: translateX(-50%);
-  }
-
+  &.position-bottom {bottom: 0;transform: translateX(-50%);}
 
   .message {padding: 8px 0;}
 
