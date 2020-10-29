@@ -36,7 +36,7 @@ new Vue({
         message: '你好'
     },
     methods: {
-        showToast() {
+        showToast(position) {
             this.$toast(`今天花了${parseInt((Math.random() * 100).toString())}`, {
                 closeButton: {
                     text: '知道了',
@@ -46,8 +46,17 @@ new Vue({
                 },
                 // enableHtml: true,
                 autoCloseDelay: 500,
-                position: 'bottom'
+                position
             })
-        }
+        },
+        showToastMiddle() {
+            this.showToast('middle')
+        },
+        showToastBottom() {
+            this.showToast('bottom')
+        },
+        showToastTop() {
+            this.showToast('top')
+        },
     }
 })
