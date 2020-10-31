@@ -20,12 +20,11 @@ export default {
   name: 'GuluToast',
   props: {
     autoClose: {
-      type: Boolean,
-      default: true,
-    },
-    autoCloseDelay: {
-      type: Number,
-      default: 1,
+      type: Boolean | Number,
+      default: 5,
+      validator(value) {
+        return value === false || typeof value === 'number';
+      }
     },
     closeButton: {
       type: Object,
@@ -62,7 +61,7 @@ export default {
       if (this.autoClose) {
         setTimeout(() => {
           this.close()
-        }, this.autoCloseDelay * 1000)
+        }, this.autoClose * 1000)
       }
     },
     updateStyle() {
@@ -153,7 +152,6 @@ $animation-duration: 1s;
     align-items: center;
     background: $toast-bg;
     color: $toast-color;
-    //border-radius: 4px;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 
     .message {padding: 8px 0;}
