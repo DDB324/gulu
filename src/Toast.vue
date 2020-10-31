@@ -5,7 +5,7 @@
         <slot v-if="!enableHtml"></slot>
         <div v-else v-html="$slots.default[0]"></div>
       </div>
-      <template v-if="closeButton.callback">
+      <template v-if="closeButton">
         <div ref="line" class="line"></div>
         <span class="close" @click="onClickClose">
         {{ closeButton.text }}
@@ -20,7 +20,7 @@ export default {
   name: 'GuluToast',
   props: {
     autoClose: {
-      type: [Boolean , Number],
+      type: [Boolean, Number],
       default: 5,
       validator(value) {
         return value === false || typeof value === 'number';

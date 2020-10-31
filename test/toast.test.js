@@ -40,10 +40,12 @@ describe('Toast', () => {
             }).$mount()
             let closeButton = vm.$el.querySelector('.close')
             expect(closeButton.textContent.trim()).to.equal('测试')
-            closeButton.click()
-            expect(callback).to.have.been.called
-            vm.$el.remove()
-            vm.$destroy()
+            setTimeout(()=>{
+                closeButton.click()
+                expect(callback).to.have.been.called
+                vm.$el.remove()
+                vm.$destroy()
+            },300)
         })
         it('可以接受enableHtml', () => {
             vm = new Constructor({

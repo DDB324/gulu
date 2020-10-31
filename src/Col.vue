@@ -10,7 +10,7 @@ let validator = (value) => {
   let keys = Object.keys(value)
   let valid = true
   keys.forEach((key) => {
-    if (!['span', 'offset'].indexOf(key)>=0) {
+    if (!(['span', 'offset'].indexOf(key) >= 0)) {
       valid = false
     }
   })
@@ -19,8 +19,8 @@ let validator = (value) => {
 export default {
   name: 'GuluCol',
   props: {
-    span: {type: [String , Number],},
-    offset: {type: [String , Number],},
+    span: {type: [String, Number],},
+    offset: {type: [String, Number],},
     iPad: {type: Object, validator,},
     narrowPc: {type: Object, validator,},
     pc: {type: Object, validator,},
