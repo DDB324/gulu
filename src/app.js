@@ -37,17 +37,19 @@ new Vue({
     },
     methods: {
         showToast(position) {
-            this.$toast(`今天花了${parseInt((Math.random() * 100).toString())}`, {
-                closeButton: {
-                    text: '知道了',
-                    callback() {
-                        console.log('用户说他知道了');
-                    }
-                },
-                // enableHtml: true,
-                autoCloseDelay: 500,
-                position
-            })
+            this.$toast(
+                `今天花了${parseInt((Math.random() * 100).toString())}`,
+                {
+                    closeButton: {
+                        text: '知道了',
+                        callback() {
+                            console.log('用户说他知道了');
+                        }
+                    },
+                    // enableHtml: true,
+                    // autoClose: 2,
+                    position
+                })
         },
         showToastMiddle() {
             this.showToast('middle')
