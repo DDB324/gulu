@@ -20,7 +20,7 @@ export default {
   name: 'GuluToast',
   props: {
     autoClose: {
-      type: Boolean | Number,
+      type: [Boolean , Number],
       default: 5,
       validator(value) {
         return value === false || typeof value === 'number';

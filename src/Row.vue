@@ -9,7 +9,7 @@ export default {
   name: 'GuluRow',
   props: {
     gutter: {
-      type: String | Number,
+      type: [String , Number],
     },
     align: {
       type: String,

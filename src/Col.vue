@@ -19,8 +19,8 @@ let validator = (value) => {
 export default {
   name: 'GuluCol',
   props: {
-    span: {type: String | Number,},
-    offset: {type: String | Number,},
+    span: {type: [String , Number],},
+    offset: {type: [String , Number],},
     iPad: {type: Object, validator,},
     narrowPc: {type: Object, validator,},
     pc: {type: Object, validator,},
