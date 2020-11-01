@@ -11,6 +11,11 @@ import Footer from "./Footer";
 import Layout from "./Layout";
 import Sider from "./Sider";
 import plugin from "./plugin";
+import Tabs from "./Tabs";
+import TabsHead from "./Tabs-head";
+import TabsBody from "./Tabs-body";
+import TabsItem from "./Tabs-item";
+import TabsPane from "./Tabs-pane";
 
 
 Vue.component('g-button', Button)
@@ -25,15 +30,17 @@ Vue.component('g-footer', Footer)
 Vue.component('g-layout', Layout)
 Vue.component('g-sider', Sider)
 Vue.use(plugin)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-head', TabsHead)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-tabs-pane', TabsPane)
 
 
 new Vue({
     el: '#app',
     data: {
-        loading1: false,
-        loading2: true,
-        loading3: false,
-        message: '你好'
+       selectedTab:'video'
     },
     methods: {
         showToast(position) {
