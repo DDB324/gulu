@@ -35,34 +35,37 @@
 </head>
 <body>
 <div id="app">
-    <g-tabs :selected.sync="selectedTab">
-        <g-tabs-head>
-            <template slot="actions">
-                <button>设置</button>
-            </template>
-            <g-tabs-item name="news">
-                <g-icon name="settings"></g-icon>
-                新闻
-            </g-tabs-item>
-            <g-tabs-item name="video" disabled>
-                视频
-            </g-tabs-item>
-            <g-tabs-item name="picture">
-                图片
-            </g-tabs-item>
-        </g-tabs-head>
-        <g-tabs-body>
-            <g-tabs-pane name="news">
-                新闻的资讯
-            </g-tabs-pane>
-            <g-tabs-pane name="video">
-                视频的资讯
-            </g-tabs-pane>
-            <g-tabs-pane name="picture">
-                图片的资讯
-            </g-tabs-pane>
-        </g-tabs-body>
+    <g-tabs selected="">
+        <div>你好</div>
     </g-tabs>
+    <!--    <g-tabs :selected.sync="selectedTab">-->
+    <!--        <g-tabs-head>-->
+    <!--            <template slot="actions">-->
+    <!--                <button>设置</button>-->
+    <!--            </template>-->
+    <!--            <g-tabs-item name="news">-->
+    <!--                <g-icon name="settings"></g-icon>-->
+    <!--                新闻-->
+    <!--            </g-tabs-item>-->
+    <!--            <g-tabs-item name="video" disabled>-->
+    <!--                视频-->
+    <!--            </g-tabs-item>-->
+    <!--            <g-tabs-item name="picture">-->
+    <!--                图片-->
+    <!--            </g-tabs-item>-->
+    <!--        </g-tabs-head>-->
+    <!--        <g-tabs-body>-->
+    <!--            <g-tabs-pane name="news">-->
+    <!--                新闻的资讯-->
+    <!--            </g-tabs-pane>-->
+    <!--            <g-tabs-pane name="video">-->
+    <!--                视频的资讯-->
+    <!--            </g-tabs-pane>-->
+    <!--            <g-tabs-pane name="picture">-->
+    <!--                图片的资讯-->
+    <!--            </g-tabs-pane>-->
+    <!--        </g-tabs-body>-->
+    <!--    </g-tabs>-->
 </div>
 <script src="./src/app.js"></script>
 </body>
