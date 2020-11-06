@@ -1,12 +1,11 @@
 <template>
-  <div class="popover" @click.stop="xxx">
+  <div class="popover" @click="onClick" ref="popover">
     <div ref="contentWrapper" class="content-wrapper"
-         @click.stop
          v-if="visible">
       <slot name="content"></slot>
     </div>
     <span ref="triggerWrapper">
-    <slot></slot>
+      <slot></slot>
     </span>
   </div>
 </template>
@@ -20,24 +19,39 @@ export default {
     }
   },
   methods: {
-    xxx() {
-      console.log('-----')
-      this.visible = !this.visible
-      if (this.visible === true) {
-        this.$nextTick(() => {
-          let {top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
-          this.$refs.contentWrapper.style.top = top + scrollY + 'px'
-          this.$refs.contentWrapper.style.left = left + scrollX + 'px'
-          document.body.appendChild(this.$refs.contentWrapper)
-          let eventHandler = () => {
-            this.visible = false
-            console.log('document隐藏了popover')
-            document.removeEventListener('click', eventHandler)
-          }
-          document.addEventListener('click', eventHandler)
-        })
-      } else {
-        console.log('vm隐藏了popover')
+    positionContent() {
+      document.body.appendChild(this.$refs.contentWrapper)
+      let {top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
+      this.$refs.contentWrapper.style.top = top + scrollY + 'px'
+      this.$refs.contentWrapper.style.left = left + scrollX + 'px'
+    },
+    onClickDocument(e) {
+      if (this.$refs.popover &&
+          (this.$refs.popover === e.target ||
+              this.$refs.popover.contains(e.target) ||
+              this.$refs.contentWrapper.contains(e.target))) {
+        return
+      }
+      this.close()
+    },
+    open() {
+      this.visible = true
+      this.$nextTick(() => {
+        document.addEventListener('click', this.onClickDocument)
+        this.positionContent()
+      })
+    },
+    close() {
+      this.visible = false
+      document.removeEventListener('click', this.onClickDocument)
+    },
+    onClick(event) {
+      if (this.$refs.triggerWrapper.contains(event.target)) {
+        if (this.visible === false) {
+          this.open()
+        } else {
+          this.close()
+        }
       }
     }
   }
@@ -49,7 +63,6 @@ export default {
   display: inline-block;
   vertical-align: top;
   position: relative;
-
 }
 
 .content-wrapper {
