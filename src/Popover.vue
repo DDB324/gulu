@@ -30,23 +30,24 @@ export default {
   },
   methods: {
     positionContent() {
-      const {contentWrapper,triggerWrapper} = this.$refs
+      const {contentWrapper, triggerWrapper} = this.$refs
       document.body.appendChild(contentWrapper)
-      let {top, left, height, width} = triggerWrapper.getBoundingClientRect()
-      let {height: height2} = contentWrapper.getBoundingClientRect()
-      if (this.position === 'top') {
-        contentWrapper.style.top = top + scrollY + 'px'
-        contentWrapper.style.left = left + scrollX + 'px'
-      } else if (this.position === 'bottom') {
-        contentWrapper.style.top = top + height + scrollY + 'px'
-        contentWrapper.style.left = left + scrollX + 'px'
-      } else if (this.position === 'left') {
-        contentWrapper.style.top = top - (height2 - height) / 2 + scrollY + 'px'
-        contentWrapper.style.left = left + scrollX + 'px'
-      } else if (this.position === 'right') {
-        contentWrapper.style.top = top - (height2 - height) / 2 + scrollY + 'px'
-        contentWrapper.style.left = left + width + scrollX + 'px'
+      const {top, left, height, width} = triggerWrapper.getBoundingClientRect()
+      const {height: height2} = contentWrapper.getBoundingClientRect()
+      let positions = {
+        top: {top: top + scrollY, left: left + scrollX},
+        bottom: {top: top + height + scrollY, left: left + scrollX},
+        left: {
+          top: top - (height2 - height) / 2 + scrollY,
+          left: left + scrollX
+        },
+        right: {
+          top: top - (height2 - height) / 2 + scrollY,
+          left: left + width + scrollX
+        }
       }
+      contentWrapper.style.top = positions[this.position].top + 'px'
+      contentWrapper.style.left = positions[this.position].left + 'px'
     },
     onClickDocument(e) {
       if (this.$refs.popover &&
