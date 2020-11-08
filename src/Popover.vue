@@ -16,7 +16,7 @@ export default {
   name: 'GuluPopover',
   data() {
     return {
-      visible: false
+      visible: false,
     }
   },
   mounted() {
@@ -142,11 +142,13 @@ $border-radius: 4px;
     &::before {
       border-top-color: black;
       top: 100%;
+      border-bottom: none;
     }
 
     &::after {
       border-top-color: white;
-      top: calc(100% - 1px)
+      top: calc(100% - 1px);
+      border-bottom: none;
     }
   }
 
@@ -156,11 +158,13 @@ $border-radius: 4px;
     &::before {
       border-bottom-color: black;
       bottom: 100%;
+      border-top: none;
     }
 
     &::after {
       border-bottom-color: white;
-      bottom: calc(100% - 1px)
+      bottom: calc(100% - 1px);
+      border-top: none;
     }
   }
 
@@ -171,6 +175,7 @@ $border-radius: 4px;
     &::before, &::after {
       top: 50%;
       transform: translateY(-50%);
+      border-right: none;
     }
 
     &::before {
@@ -180,7 +185,7 @@ $border-radius: 4px;
 
     &::after {
       border-left-color: white;
-      left: calc(100% - 1px)
+      left: calc(100% - 1px);
     }
   }
 
@@ -190,6 +195,7 @@ $border-radius: 4px;
     &::before, &::after {
       top: 50%;
       transform: translateY(-50%);
+      border-left: none;
     }
 
     &::before {
