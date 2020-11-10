@@ -34,80 +34,12 @@
     </style>
 </head>
 <body>
-<div id="app" style="padding-top: 100px;padding-left: 100px;border:1px solid red">
-    <div style="border:1px solid green;padding:10px;
-    overflow: hidden">
-        <g-popover>
-            <template v-slot:content="{close}">
-                <div>
-                    <div>
-                        <a href="https://www.baidu.com">百度</a>
-                    </div>
-                    <g-button @click="close">关闭</g-button>
-                </div>
-            </template>
-            <g-button>点我</g-button>
-        </g-popover>
-        <g-popover position="bottom">
-            <template v-slot:content>
-                <div>
-                    popover内容
-                </div>
-            </template>
-            <g-button>点我</g-button>
-        </g-popover>
-        <g-popover position="left">
-            <template v-slot:content>
-                <div>
-                    popover内容
-                </div>
-            </template>
-            <g-button>点我</g-button>
-        </g-popover>
-        <g-popover position="right">
-            <template v-slot:content>
-                <div>
-                    popover内容
-                </div>
-            </template>
-            <g-button>点我</g-button>
-        </g-popover>
-    </div>
-    <div style="border:1px solid green;padding:10px;
-    overflow: hidden">
-        <g-popover trigger="hover">
-            <template v-slot:content>
-                <div>
-                    popover内容
-                </div>
-            </template>
-            <g-button>点我</g-button>
-        </g-popover>
-        <g-popover position="bottom" trigger="hover">
-            <template v-slot:content>
-                <div>
-                    popover内容
-                </div>
-            </template>
-            <g-button>点我</g-button>
-        </g-popover>
-        <g-popover position="left" trigger="hover">
-            <template v-slot:content>
-                <div>
-                    popover内容
-                </div>
-            </template>
-            <g-button>点我</g-button>
-        </g-popover>
-        <g-popover position="right" trigger="hover">
-            <template v-slot:content>
-                <div>
-                    popover内容
-                </div>
-            </template>
-            <g-button>点我</g-button>
-        </g-popover>
-    </div>
+<div id="app" style="padding:50px">
+<g-collapse>
+    <g-collapse-item title="标题1" :open="false">内容1</g-collapse-item>
+    <g-collapse-item title="标题2" :open="false">内容2</g-collapse-item>
+    <g-collapse-item title="标题3" :open="false">内容3</g-collapse-item>
+</g-collapse>
 </div>
 <script src="./src/app.js"></script>
 </body>
