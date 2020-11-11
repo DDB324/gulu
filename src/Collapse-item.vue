@@ -1,9 +1,9 @@
 <template>
-  <div class="collapse-item" :class="{open:currentOpen}" @click="triggerOpen">
-    <div class="title">
+  <div class="collapse-item" :class="{open}">
+    <div class="title" @click="toggle">
       {{ title }}
     </div>
-    <div class="content" v-if="currentOpen">
+    <div class="content" v-if="open">
       <slot></slot>
     </div>
   </div>
@@ -12,9 +12,10 @@
 <script>
 export default {
   name: 'GuluCollapseItem',
+  inject: ['eventBus'],
   data() {
     return {
-      currentOpen: this.open
+      open: false,
     }
   },
   props: {
@@ -22,16 +23,22 @@ export default {
       type: String,
       required: true,
     },
-    open: {
-      type: Boolean,
-      required: true,
+    name: {
+      type: String,
+      required: true
     }
   },
   methods: {
-    triggerOpen() {
-      this.currentOpen = !this.currentOpen
-    }
-  }
+    toggle() {
+      let select = {[true]: 'removeActiveName', [false]: 'addActiveName'}
+      this.eventBus && this.eventBus.$emit(`update:${select[this.open]}`, this.name)
+    },
+  },
+  created() {
+    this.eventBus && this.eventBus.$on('update:activeName', (names) => {
+      this.open = names.indexOf(this.name) >= 0;
+    })
+  },
 }
 </script>
 
@@ -56,7 +63,6 @@ $border-radius: 4px;
     padding: 0 8px;
     display: flex;
     align-items: center;
-    cursor: grab;
     border-bottom: none;
   }
 

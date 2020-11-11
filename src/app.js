@@ -47,7 +47,7 @@ new Vue({
     el: '#app',
     data() {
         return {
-            open: true
+            activeName:['1','2']
         }
     },
     methods: {
