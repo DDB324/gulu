@@ -34,6 +34,15 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+$button-height: 32px;
+$font-size: 14px;
+$button-bg: white;
+$button-active-bg: #eee;
+$border-radius: 4px;
+$color: #333;
+$border-color: #999;
+$border-color-hover: #666;
+
 @keyframes spin {
   0% {transform: rotate(0deg)}
   100% {transform: rotate(360deg)}
@@ -41,16 +50,25 @@ export default {
 
 .loading {animation: spin 1s infinite linear;}
 
-.g-button {height: var(--button-height);font-size: var(--font-size);padding: 0 1em; /*没有写宽度，把按钮的宽度写死是不好的*/
-  border-radius: var(--border-radius);border: 1px solid var(--border-color);background: var(--button-bg);display: inline-flex;align-items: center;justify-content: center;vertical-align: middle;
+.g-button {
+  height: $button-height;
+  font-size: $font-size;
+  padding: 0 1em; /*没有写宽度，把按钮的宽度写死是不好的*/
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
 
   .content {order: 2;}
 
   .icon {order: 1;margin-right: .1em;}
 
-  &:hover {border-color: var(--border-color-hover)}
+  &:hover {border-color: $border-color-hover}
 
-  &:active {background: var(--button-active-bg);}
+  &:active {background: $button-active-bg;}
 
   &:focus {outline: none;}
 
