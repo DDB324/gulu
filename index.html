@@ -36,10 +36,10 @@
 <body>
 <div id="app" style="padding:50px">
 <g-collapse single :active-name.sync="activeName">
-    <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
-    <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
-    <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
-    {{ activeName }}
+    <g-row gutter="20">
+        <g-col span="12" style="background: #777">1</g-col>
+        <g-col span="10" offset="2"  style="background: #666">2</g-col>
+    </g-row>
 </g-collapse>
 </div>
 <script src="./src/app.js"></script>
