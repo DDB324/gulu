@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Input from '../../../src/Input'
+import Input from '../../../src/Input/Input'
 
 export default {
   components: {

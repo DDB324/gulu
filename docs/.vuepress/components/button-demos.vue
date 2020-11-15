@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Button from '../../../src/Button'
+import Button from '../../../src/Button/Button'
 
 export default {
   components: {

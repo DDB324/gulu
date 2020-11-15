@@ -35,12 +35,11 @@
 </head>
 <body>
 <div id="app" style="padding:50px">
-<g-collapse single :active-name.sync="activeName">
-    <g-row gutter="20">
-        <g-col span="12" style="background: #777">1</g-col>
-        <g-col span="10" offset="2"  style="background: #666">2</g-col>
-    </g-row>
-</g-collapse>
+    <g-button>默认按钮</g-button>
+    <g-button icon="settings">icon在左边按钮</g-button>
+    <g-button icon="settings" icon-position="right">icon在右边按钮</g-button>
+    <g-button loading>loading按钮</g-button>
+    <g-button disabled>禁用按钮</g-button>
 </div>
 <script src="./src/app.js"></script>
 </body>

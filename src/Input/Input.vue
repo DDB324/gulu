@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Icon from './Icon.vue'
+import Icon from '../Icon/Icon.vue'
 
 export default {
   components: {

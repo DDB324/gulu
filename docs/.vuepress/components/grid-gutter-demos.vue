@@ -31,8 +31,8 @@
   </div>
 </template>
 <script>
-import Row from '../../../src/Row'
-import Col from '../../../src/Col'
+import Row from '../../../src/Grid/Row'
+import Col from '../../../src/Grid/Col'
 
 export default {
   components: {
