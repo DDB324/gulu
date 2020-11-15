@@ -5,9 +5,14 @@
       <g-header>
         <div class="demoHeader">Header</div>
       </g-header>
-      <g-content>
-        <div class="demoContent">Content</div>
-      </g-content>
+      <g-layout>
+        <g-sider>
+          <div class="demoSider">Sider</div>
+        </g-sider>
+        <g-content>
+          <div class="demoContent">Content</div>
+        </g-content>
+      </g-layout>
       <g-footer>
         <div class="demoFooter">Footer</div>
       </g-footer>
@@ -33,7 +38,7 @@ export default {
   },
   data() {
     return {
-      content:`
+      content: `
       <g-layout class="demoLayout">
       <g-header>
         <div class="demoHeader">Header</div>
@@ -45,17 +50,18 @@ export default {
         <div class="demoFooter">Footer</div>
       </g-footer>
     </g-layout>
-      `.replace(/ {4}(?! )/g,'').trim()
+      `.replace(/ {4}(?! )/g, '').trim()
     }
   }
 }
 </script>
 <style lang="scss" scoped>
-%display{
+%display {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -71,6 +77,13 @@ export default {
   .demoContent {
     height: 120px;
     background: #eee;
+    @extend %display
+  }
+
+  .demoSider {
+    height:100%;
+    width: 200px;
+    background: #ddd;
     @extend %display
   }
 

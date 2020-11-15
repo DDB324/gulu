@@ -2,15 +2,20 @@
   <div>
     <p><strong>预览</strong></p>
     <g-layout class="demoLayout">
-      <g-header>
-        <div class="demoHeader">Header</div>
-      </g-header>
-      <g-content>
-        <div class="demoContent">Content</div>
-      </g-content>
-      <g-footer>
-        <div class="demoFooter">Footer</div>
-      </g-footer>
+      <g-sider>
+        <div class="demoSider">Sider</div>
+      </g-sider>
+      <g-layout>
+        <g-header>
+          <div class="demoHeader">Header</div>
+        </g-header>
+        <g-content>
+          <div class="demoContent">Content</div>
+        </g-content>
+        <g-footer>
+          <div class="demoFooter">Footer</div>
+        </g-footer>
+      </g-layout>
     </g-layout>
     <p><strong>代码</strong></p>
     <pre><code>{{ content }}</code></pre>
@@ -33,7 +38,7 @@ export default {
   },
   data() {
     return {
-      content:`
+      content: `
       <g-layout class="demoLayout">
       <g-header>
         <div class="demoHeader">Header</div>
@@ -45,17 +50,18 @@ export default {
         <div class="demoFooter">Footer</div>
       </g-footer>
     </g-layout>
-      `.replace(/ {4}(?! )/g,'').trim()
+      `.replace(/ {4}(?! )/g, '').trim()
     }
   }
 }
 </script>
 <style lang="scss" scoped>
-%display{
+%display {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -71,6 +77,13 @@ export default {
   .demoContent {
     height: 120px;
     background: #eee;
+    @extend %display
+  }
+
+  .demoSider {
+    width: 200px;
+    height:100%;
+    background: #ddd;
     @extend %display
   }
 
