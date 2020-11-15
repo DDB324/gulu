@@ -1,5 +1,5 @@
 <template>
-  <button class="g-button ddb2" @click="$emit('click')" :class="{[`icon-${iconPosition}`]: true}">
+  <button class="g-button ddb2" :disabled="disabled" @click="$emit('click')" :class="{[`icon-${iconPosition}`]: true}">
     <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
     <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
     <span class="content">
@@ -28,6 +28,10 @@ export default {
       validator(value) {
         return value === 'left' || value === 'right';
       }
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     }
   }
 };
