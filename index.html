@@ -41,6 +41,10 @@
     <g-button loading>loading按钮</g-button>
     <g-button disabled>禁用按钮</g-button>
     <g-button @click="$toast('nihao')">点击</g-button>
+    <g-popover>
+        <template v-slot:content>popover内容</template>
+        <g-button>上方弹出</g-button>
+    </g-popover>
 </div>
 <script src="./src/app.js"></script>
 </body>
