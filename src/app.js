@@ -47,7 +47,8 @@ new Vue({
     el: '#app',
     data() {
         return {
-            activeName:['1','2']
+            activeName:['1','2'],
+            selectedTab:'3',
         }
     },
     methods: {
