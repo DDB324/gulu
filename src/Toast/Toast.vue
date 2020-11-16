@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="toastStyle">
+  <div class="wrapper gulu-toast" :class="toastStyle">
     <div class="toast" ref="toast">
       <div class="message">
         <slot v-if="!enableHtml"></slot>
