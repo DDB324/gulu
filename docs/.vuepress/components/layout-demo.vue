@@ -1,17 +1,17 @@
 <template>
   <div>
     <p><strong>预览</strong></p>
-    <g-layout class="demoLayout">
-      <g-header>
+    <d-layout class="demoLayout">
+      <d-header>
         <div class="demoHeader">Header</div>
-      </g-header>
-      <g-content>
+      </d-header>
+      <d-content>
         <div class="demoContent">Content</div>
-      </g-content>
-      <g-footer>
+      </d-content>
+      <d-footer>
         <div class="demoFooter">Footer</div>
-      </g-footer>
-    </g-layout>
+      </d-footer>
+    </d-layout>
     <p><strong>代码</strong></p>
     <pre><code>{{ content }}</code></pre>
   </div>
@@ -25,26 +25,26 @@ import Sider from '../../../src/Layout/Sider'
 
 export default {
   components: {
-    'g-layout': Layout,
-    'g-header': Header,
-    'g-footer': Footer,
-    'g-content': Content,
-    'g-sider': Sider,
+    'd-layout': Layout,
+    'd-header': Header,
+    'd-footer': Footer,
+    'd-content': Content,
+    'd-sider': Sider,
   },
   data() {
     return {
       content:`
-      <g-layout class="demoLayout">
-      <g-header>
+      <d-layout class="demoLayout">
+      <d-header>
         <div class="demoHeader">Header</div>
-      </g-header>
-      <g-content>
+      </d-header>
+      <d-content>
         <div class="demoContent">Content</div>
-      </g-content>
-      <g-footer>
+      </d-content>
+      <d-footer>
         <div class="demoFooter">Footer</div>
-      </g-footer>
-    </g-layout>
+      </d-footer>
+    </d-layout>
       `.replace(/ {4}(?! )/g,'').trim()
     }
   }
