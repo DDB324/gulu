@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/DuoDuo/',
+    base: '/gulu/',
     title: 'DuoDuo UI', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: '一个好用的UI框架',// meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
