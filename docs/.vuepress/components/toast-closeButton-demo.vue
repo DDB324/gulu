@@ -1,9 +1,9 @@
 <template>
   <div>
     <p><strong>预览</strong></p>
-    <g-button @click="onClickButton">
+    <d-button @click="onClickButton">
       点击后在上方弹出提示
-    </g-button>
+    </d-button>
     <p><strong>代码</strong></p>
     <pre><code>{{ content }}</code></pre>
   </div>
@@ -17,17 +17,13 @@ import Button from "../../../src/Button/Button";
 Vue.use(plugin)
 export default {
   components: {
-    'g-toast': Toast,
-    'g-button': Button
+    'd-toast': Toast,
+    'd-button': Button
   },
   data() {
     return {
       content: `
-    .gulu-toast {
-      z-index: 30;
-    }
-
-    <g-button @click="onClickButton">点击后在上方弹出提示</g-button>
+    <d-button @click="onClickButton">点击后在上方弹出提示</d-button>
 
     methods: {
         onClickButton() {
@@ -59,8 +55,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.gulu-toast {
-  z-index: 30;
-}
-</style>
