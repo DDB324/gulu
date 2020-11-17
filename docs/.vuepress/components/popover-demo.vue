@@ -1,22 +1,22 @@
 <template>
   <div>
     <p><strong>预览</strong></p>
-    <g-popover>
+    <d-popover>
       <template v-slot:content><strong>popover内容</strong></template>
-      <g-button>上方弹出</g-button>
-    </g-popover>
-    <g-popover position="bottom">
+      <d-button>上方弹出</d-button>
+    </d-popover>
+    <d-popover position="bottom">
       <template v-slot:content>popover内容</template>
-      <g-button>下方弹出</g-button>
-    </g-popover>
-    <g-popover position="left">
+      <d-button>下方弹出</d-button>
+    </d-popover>
+    <d-popover position="left">
       <template v-slot:content>popover内容</template>
-      <g-button>左方弹出</g-button>
-    </g-popover>
-    <g-popover position="right">
+      <d-button>左方弹出</d-button>
+    </d-popover>
+    <d-popover position="right">
       <template v-slot:content>popover内容</template>
-      <g-button>右方弹出</g-button>
-    </g-popover>
+      <d-button>右方弹出</d-button>
+    </d-popover>
     <p><strong>代码</strong></p>
     <pre><code>{{ content }}</code></pre>
   </div>
@@ -27,31 +27,31 @@ import Button from "../../../src/Button/Button";
 
 export default {
   components: {
-    'g-popover': Popover,
-    'g-button': Button
+    'd-popover': Popover,
+    'd-button': Button
   },
   data() {
     return {
       content: `
-    <g-popover>
+    <d-popover>
       <template v-slot:content><strong>popover内容</strong></template>
-      <g-button>上方弹出</g-button>
-    </g-popover>
+      <d-button>上方弹出</d-button>
+    </d-popover>
 
-    <g-popover position="bottom">
+    <d-popover position="bottom">
       <template v-slot:content>popover内容</template>
-      <g-button>下方弹出</g-button>
-    </g-popover>
+      <d-button>下方弹出</d-button>
+    </d-popover>
 
-    <g-popover position="left">
+    <d-popover position="left">
       <template v-slot:content>popover内容</template>
-      <g-button>左方弹出</g-button>
-    </g-popover>
+      <d-button>左方弹出</d-button>
+    </d-popover>
 
-    <g-popover position="right">
+    <d-popover position="right">
       <template v-slot:content>popover内容</template>
-      <g-button>右方弹出</g-button>
-    </g-popover>
+      <d-button>右方弹出</d-button>
+    </d-popover>
       `.replace(/ {4}(?! )/g, '').trim()
     }
   }
