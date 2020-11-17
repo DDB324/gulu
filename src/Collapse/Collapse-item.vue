@@ -64,6 +64,7 @@ $border-radius: 4px;
     display: flex;
     align-items: center;
     border-bottom: none;
+    background: #eee;
   }
 
   .content {
