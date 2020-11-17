@@ -107,7 +107,9 @@ $animation-duration: 1s;
   0% {opacity: 0}
   100% {opacity: 1}
 }
-
+.gulu-toast{
+  z-index:30;
+}
 .wrapper {
   position: fixed;
   left: 50%;
