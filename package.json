@@ -1,5 +1,5 @@
 {
-  "name": "DuoDuo-UI",
+  "name": "duoduo-ui",
   "version": "0.1.0",
   "description": "这是一个Vue UI框架",
   "main": "dist/index.js",
