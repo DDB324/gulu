@@ -156,11 +156,16 @@ $animation-duration: 1s;
     color: $toast-color;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 
-    .message {padding: 8px 0;}
+    .message {padding: 8px 0;
+      white-space: nowrap
+    }
 
     .line {border-left: 1px solid white;margin-left: 16px;}
 
-    .close {padding-left: 16px;flex-shrink: 0;}
+    .close {padding-left: 16px;
+      //flex-shrink: 0;
+      white-space: nowrap;
+    }
   }
 }
 
