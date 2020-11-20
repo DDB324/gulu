@@ -52,5 +52,15 @@ new Vue({
         }
     },
     methods: {
+        onClickButton() {
+            this.$toast('我是谁?', {
+                closeButton: {
+                    text: '点击后触发回调函数',
+                    callback: () => {
+                        console.log('我是ddb');
+                    }
+                }
+            })
+        }
     }
 })
