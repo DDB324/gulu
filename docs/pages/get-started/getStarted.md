@@ -2,8 +2,8 @@
 
 ## 引入必要资源
 ```javascript
-import {Button} from "duoduo-ui-demo";
-import "duoduo-ui-demo/dist/index.css";
+import {Button} from "duoduo-ui";
+import "duoduo-ui/dist/index.css";
 ```
 
 ## 注册组件
