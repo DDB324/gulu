@@ -1,5 +1,7 @@
 <template>
-  <div class="cascader"></div>
+  <div class="cascader">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
@@ -9,6 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/helper";
 .cascader{
 
 }

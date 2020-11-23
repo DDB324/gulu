@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-@import "../assets/style/helper.scss";
+@import "../assets/style/helper";
 
 @keyframes spin {
   0% {transform: rotate(0deg)}
