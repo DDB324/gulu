@@ -12,40 +12,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --button-height: 32px;
-            --font-size: 14px;
-            --button-bg: white;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color: #333;
-            --border-color: #999;
-            --border-color-hover: #666;
-        }
-
-        #app {
-            /*margin: 20px;*/
-        }
-
-        body {
-            font-size: var(--font-size)
-        }
     </style>
 </head>
 <body>
 <div id="app" style="padding:50px">
-    <g-button @click="onClickButton">点击后在上方弹出提示</g-button>
-    <g-button-group>
-        <g-button icon="back">上一页</g-button>
-        <g-button >更多</g-button>
-        <g-button icon="next" icon-position="right">下一页</g-button>
-    </g-button-group>
-    <g-button>默认按钮</g-button>
-    <g-button icon="settings">icon在左边按钮</g-button>
-    <g-button icon="settings" icon-position="right">icon在右边按钮</g-button>
-    <g-button loading>loading按钮</g-button>
-    <g-button disabled>禁用按钮</g-button>
+    <g-cascader :source="source"></g-cascader>
 </div>
 <script src="./src/app.js"></script>
 </body>
