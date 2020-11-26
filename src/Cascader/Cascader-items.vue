@@ -3,6 +3,7 @@
     <div class="left">
       <div class="label" v-for="item in sourceItem" @click="leftSelected=item">
         {{ item.name }}
+        <g-icon class="icon" name="next" v-if="item.children"></g-icon>
       </div>
     </div>
     <div class="right" v-if="rightSelected">
@@ -14,13 +15,9 @@
 <script>
 export default {
   name: 'GuluCascaderItem',
-  computed:{
-    rightSelected(){
-      if(this.leftSelected && this.leftSelected.children){
-        return this.leftSelected.children
-      }else{
-        return null
-      }
+  computed: {
+    rightSelected() {
+      return this.leftSelected && this.leftSelected.children ? this.leftSelected.children : null;
     }
   },
   props: {
@@ -28,7 +25,7 @@ export default {
       type: Array,
     }
   },
-  data(){
+  data() {
     return {
       leftSelected: null,
     }
@@ -37,10 +34,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cascaderItems{
-  display:flex;
-  .left{
-    outline:1px solid red;
+@import "src/assets/style/helper";
+
+.cascaderItems {
+  height: 100%;
+  display: flex;
+
+  .left {
+    padding-top: 5px;
+
+    .label {
+      padding: 5px 12px;
+      @extend %flex-center;
+
+      .icon {
+        margin-left: .5em;
+        transform: scale(0.8);
+      }
+    }
+  }
+
+  .right {
+    border-left: 1px solid #f0f0f0;
   }
 }
 </style>
